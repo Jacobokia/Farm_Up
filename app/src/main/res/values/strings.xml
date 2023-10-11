@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">Farm Up</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="first_name">First Name</string>
+    <string name="last_name">Last Name</string>
+    <string name="type">Type</string>
+    <string name="breed">Breed</string>
+    <string name="animal_id">Animal ID</string>
+    <string name="price">Price</string>
+    <string name="sold_to">Sold to</string>
+    <string name="selling_date">Selling Date</string>
+    <string name="hello_sales">Hello Sales</string>
+</resources>

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/id_home_fragment">
+
+    <fragment
+        android:id="@+id/id_home_fragment"
+        android:name="com.cobs.farmup.ui.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" />
+    <fragment
+        android:id="@+id/id_workers_fragment"
+        android:name="com.cobs.farmup.ui.WorkersFragment"
+        android:label="fragment_workers"
+        tools:layout="@layout/fragment_workers" >
+        <action
+            android:id="@+id/action_id_workers_fragment_to_createWorkerFragment"
+            app:destination="@id/createWorkerFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/id_livestock_fragment"
+        android:name="com.cobs.farmup.ui.LivestockFragment"
+        android:label="fragment_livestock"
+        tools:layout="@layout/fragment_livestock" >
+        <action
+            android:id="@+id/action_id_livestock_fragment_to_createLivestockFragment"
+            app:destination="@id/createLivestockFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/id_sales_fragment"
+        android:name="com.cobs.farmup.ui.SalesFragment"
+        android:label="fragment_sales"
+        tools:layout="@layout/fragment_sales" >
+        <action
+            android:id="@+id/action_id_sales_fragment_to_createSalesFragment"
+            app:destination="@id/createSalesFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/id_settings_fragment"
+        android:name="com.cobs.farmup.ui.SettingsFragment"
+        android:label="fragment_settings"
+        tools:layout="@layout/fragment_settings" />
+    <fragment
+        android:id="@+id/createWorkerFragment"
+        android:name="com.cobs.farmup.CreateWorkerFragment"
+        android:label="fragment_create_worker"
+        tools:layout="@layout/fragment_create_worker" >
+        <action
+            android:id="@+id/action_createWorkerFragment_to_id_workers_fragment"
+            app:destination="@id/id_workers_fragment"
+            app:popUpTo="@id/id_workers_fragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/createLivestockFragment"
+        android:name="com.cobs.farmup.CreateLivestockFragment"
+        android:label="fragment_create_livestock"
+        tools:layout="@layout/fragment_create_livestock" >
+        <action
+            android:id="@+id/action_createLivestockFragment_to_id_livestock_fragment"
+            app:destination="@id/id_livestock_fragment"
+            app:popUpTo="@id/id_livestock_fragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/createSalesFragment"
+        android:name="com.cobs.farmup.CreateSalesFragment"
+        android:label="fragment_create_sales"
+        tools:layout="@layout/fragment_create_sales" >
+        <action
+            android:id="@+id/action_createSalesFragment_to_id_sales_fragment"
+            app:destination="@id/id_sales_fragment" />
+    </fragment>
+</navigation>
