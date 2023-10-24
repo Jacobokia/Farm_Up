@@ -3,18 +3,13 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/id_home_fragment">
+    app:startDestination="@id/splashFragment">
 
-    <fragment
-        android:id="@+id/id_home_fragment"
-        android:name="com.cobs.farmup.ui.HomeFragment"
-        android:label="fragment_home"
-        tools:layout="@layout/fragment_home" />
     <fragment
         android:id="@+id/id_workers_fragment"
         android:name="com.cobs.farmup.ui.WorkersFragment"
-        android:label="fragment_workers"
-        tools:layout="@layout/fragment_workers" >
+        android:label="Workers"
+        tools:layout="@layout/fragment_workers">
         <action
             android:id="@+id/action_id_workers_fragment_to_createWorkerFragment"
             app:destination="@id/createWorkerFragment" />
@@ -22,8 +17,8 @@
     <fragment
         android:id="@+id/id_livestock_fragment"
         android:name="com.cobs.farmup.ui.LivestockFragment"
-        android:label="fragment_livestock"
-        tools:layout="@layout/fragment_livestock" >
+        android:label="Livestock"
+        tools:layout="@layout/fragment_livestock">
         <action
             android:id="@+id/action_id_livestock_fragment_to_createLivestockFragment"
             app:destination="@id/createLivestockFragment" />
@@ -31,22 +26,17 @@
     <fragment
         android:id="@+id/id_sales_fragment"
         android:name="com.cobs.farmup.ui.SalesFragment"
-        android:label="fragment_sales"
-        tools:layout="@layout/fragment_sales" >
+        android:label="Sales"
+        tools:layout="@layout/fragment_sales">
         <action
             android:id="@+id/action_id_sales_fragment_to_createSalesFragment"
             app:destination="@id/createSalesFragment" />
     </fragment>
     <fragment
-        android:id="@+id/id_settings_fragment"
-        android:name="com.cobs.farmup.ui.SettingsFragment"
-        android:label="fragment_settings"
-        tools:layout="@layout/fragment_settings" />
-    <fragment
         android:id="@+id/createWorkerFragment"
         android:name="com.cobs.farmup.CreateWorkerFragment"
-        android:label="fragment_create_worker"
-        tools:layout="@layout/fragment_create_worker" >
+        android:label="Create Worker"
+        tools:layout="@layout/fragment_create_worker">
         <action
             android:id="@+id/action_createWorkerFragment_to_id_workers_fragment"
             app:destination="@id/id_workers_fragment"
@@ -56,8 +46,8 @@
     <fragment
         android:id="@+id/createLivestockFragment"
         android:name="com.cobs.farmup.CreateLivestockFragment"
-        android:label="fragment_create_livestock"
-        tools:layout="@layout/fragment_create_livestock" >
+        android:label="Create Livestock"
+        tools:layout="@layout/fragment_create_livestock">
         <action
             android:id="@+id/action_createLivestockFragment_to_id_livestock_fragment"
             app:destination="@id/id_livestock_fragment"
@@ -67,10 +57,68 @@
     <fragment
         android:id="@+id/createSalesFragment"
         android:name="com.cobs.farmup.CreateSalesFragment"
-        android:label="fragment_create_sales"
-        tools:layout="@layout/fragment_create_sales" >
+        android:label="Make A Sale"
+        tools:layout="@layout/fragment_create_sales">
         <action
             android:id="@+id/action_createSalesFragment_to_id_sales_fragment"
             app:destination="@id/id_sales_fragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/id_purchases_fragment"
+        android:name="com.cobs.farmup.PurchasesFragment"
+        android:label="Purchases"
+        tools:layout="@layout/fragment_purchases" />
+    <fragment
+        android:id="@+id/splashFragment"
+        android:name="com.cobs.farmup.ui.SplashFragment"
+        android:label="fragment_splash"
+        tools:layout="@layout/fragment_splash" >
+        <action
+            android:id="@+id/action_splashFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.cobs.farmup.ui.LoginFragment"
+        android:label="LoginFragment" >
+        <action
+            android:id="@+id/action_loginFragment_to_ownerFragment"
+            app:destination="@id/ownerFragment" />
+        <action
+            android:id="@+id/action_loginFragment_to_workerFragment2"
+            app:destination="@id/workerFragment2" />
+    </fragment>
+    <fragment
+        android:id="@+id/ownerFragment"
+        android:name="com.cobs.farmup.ui.OwnerFragment"
+        android:label="fragment_owner"
+        tools:layout="@layout/fragment_owner" >
+        <action
+            android:id="@+id/action_ownerFragment_to_id_workers_fragment"
+            app:destination="@id/id_workers_fragment" />
+        <action
+            android:id="@+id/action_ownerFragment_to_id_livestock_fragment"
+            app:destination="@id/id_livestock_fragment" />
+        <action
+            android:id="@+id/action_ownerFragment_to_id_sales_fragment"
+            app:destination="@id/id_sales_fragment" />
+        <action
+            android:id="@+id/action_ownerFragment_to_id_purchases_fragment"
+            app:destination="@id/id_purchases_fragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/workerFragment2"
+        android:name="com.cobs.farmup.ui.WorkerFragment"
+        android:label="fragment_worker"
+        tools:layout="@layout/fragment_worker" >
+        <action
+            android:id="@+id/action_workerFragment2_to_id_livestock_fragment"
+            app:destination="@id/id_livestock_fragment" />
+        <action
+            android:id="@+id/action_workerFragment2_to_id_sales_fragment"
+            app:destination="@id/id_sales_fragment" />
+        <action
+            android:id="@+id/action_workerFragment2_to_id_purchases_fragment"
+            app:destination="@id/id_purchases_fragment" />
     </fragment>
 </navigation>

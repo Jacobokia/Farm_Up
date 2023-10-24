@@ -24,6 +24,7 @@
         android:layout_height="wrap_content"
         android:layout_marginEnd="16dp"
         android:layout_marginBottom="96dp"
+        android:contentDescription="@string/add_a_livestock"
         android:clickable="true"
         android:src="@drawable/baseline_pets_24"
         app:layout_constraintBottom_toBottomOf="parent"

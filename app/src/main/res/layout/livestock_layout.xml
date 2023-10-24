@@ -1,44 +1,195 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    android:layout_margin="10dp"
+    android:background="@color/light_green"
+    style="?attr/materialCardViewElevatedStyle"
     xmlns:app="http://schemas.android.com/apk/res-auto">
-    <androidx.cardview.widget.CardView
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:cardElevation="5dp"
-        app:cardCornerRadius="5dp"
-        android:layout_margin="10dp"
-        >
-        <androidx.constraintlayout.widget.ConstraintLayout
+        android:orientation="vertical">
+        <ImageView
+            android:id="@+id/livestock_image"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="210dp"
+            app:srcCompat="@drawable/goat__1_"
+            android:scaleType="centerCrop"
+            android:contentDescription="pic of a goat"
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:id="@+id/tag_number_view"
+                android:text="Tag Number"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="40"
+                android:layout_margin="10dp"
+                android:textSize="24sp"
+                android:gravity="center_horizontal"
+                />
+            <TextView
+                android:id="@+id/tag_number"
+                android:text="Tag Number"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="40"
+                android:layout_margin="10dp"
+                android:textSize="24sp"
+                android:gravity="center_horizontal"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:id="@+id/name_view"
+                android:text="Name"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="40"
+                android:layout_margin="10dp"
+                android:textSize="24sp"
+                android:gravity="center_horizontal"
+                />
+
+
+            <TextView
+                android:id="@+id/livestock_name"
+                android:text="Name"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="40"
+                android:layout_margin="10dp"
+                android:textSize="24sp"
+                android:gravity="center_horizontal"
+                />
+
+        </LinearLayout>
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:id="@+id/type_view"
+                android:text="@string/type"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="40"
+                android:layout_margin="10dp"
+                android:textSize="24sp"
+                android:gravity="center_horizontal"
+                />
+
+
             <TextView
                 android:id="@+id/type"
                 android:text="@string/type"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="40"
+                android:layout_margin="10dp"
+                android:textSize="24sp"
+                android:gravity="center_horizontal"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:id="@+id/breed_view"
+                android:text="@string/breed"
+                android:layout_width="0dp"
+                android:layout_weight="40"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
                 android:textSize="24sp"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
+                android:gravity="center_horizontal"
                 />
-
             <TextView
                 android:id="@+id/breed"
                 android:text="@string/breed"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="40"
+                android:layout_margin="10dp"
+                android:textSize="24sp"
+                android:gravity="center_horizontal"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:id="@+id/age_view"
+                android:text="Age"
+                android:layout_width="0dp"
+                android:layout_weight="40"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
                 android:textSize="24sp"
-                app:layout_constraintTop_toBottomOf="@+id/type"
-                app:layout_constraintStart_toStartOf="parent"
+                android:gravity="center_horizontal"
                 />
-        </androidx.constraintlayout.widget.ConstraintLayout>
+            <TextView
+                android:id="@+id/age"
+                android:text="Age"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="40"
+                android:layout_margin="10dp"
+                android:textSize="24sp"
+                android:gravity="center_horizontal"
+                />
 
-    </androidx.cardview.widget.CardView>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:id="@+id/gender_view"
+                android:text="Gender"
+                android:layout_width="0dp"
+                android:layout_weight="40"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:textSize="24sp"
+                android:gravity="center_horizontal"
+                />
+            <TextView
+                android:id="@+id/gender"
+                android:text="Gender"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="40"
+                android:layout_margin="10dp"
+                android:textSize="24sp"
+                android:gravity="center_horizontal"
+                />
+
+        </LinearLayout>
+
+    </LinearLayout>
 
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+</com.google.android.material.card.MaterialCardView>

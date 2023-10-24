@@ -6,9 +6,15 @@
     <string name="last_name">Last Name</string>
     <string name="type">Type</string>
     <string name="breed">Breed</string>
-    <string name="animal_id">Animal ID</string>
-    <string name="price">Price</string>
-    <string name="sold_to">Sold to</string>
-    <string name="selling_date">Selling Date</string>
+    <string name="animal_id">Animal ID:</string>
+    <string name="price">Price:</string>
+    <string name="sold_to">Sold to:</string>
+    <string name="selling_date">Selling Date:</string>
     <string name="hello_sales">Hello Sales</string>
+    <string name="image_of_a_goat">Image of a goat</string>
+    <string name="phone">Phone</string>
+    <string name="password">Password</string>
+    <string name="login">Login</string>
+    <string name="add_a_worker">add a worker</string>
+    <string name="add_a_livestock">add a livestock</string>
 </resources>

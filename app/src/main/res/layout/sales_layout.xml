@@ -2,6 +2,7 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    android:background="@color/light_green"
     xmlns:app="http://schemas.android.com/apk/res-auto">
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
@@ -15,6 +16,17 @@
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/animal_id_view"
+                android:text="@string/animal_id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:textSize="24sp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                />
             <TextView
                 android:id="@+id/animal_id"
                 android:text="@string/animal_id"
@@ -23,6 +35,18 @@
                 android:layout_margin="10dp"
                 android:textSize="24sp"
                 app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/animal_id_view"
+                app:layout_constraintEnd_toEndOf="parent"
+                />
+
+            <TextView
+                android:id="@+id/animal_price_view"
+                android:text="@string/price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:textSize="24sp"
+                app:layout_constraintTop_toBottomOf="@+id/animal_id_view"
                 app:layout_constraintStart_toStartOf="parent"
                 />
 
@@ -34,8 +58,20 @@
                 android:layout_margin="10dp"
                 android:textSize="24sp"
                 app:layout_constraintTop_toBottomOf="@+id/animal_id"
+                app:layout_constraintStart_toEndOf="@+id/animal_price_view"
+                app:layout_constraintEnd_toEndOf="parent"
+                />
+            <TextView
+                android:id="@+id/sold_to_view"
+                android:text="@string/sold_to"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:textSize="24sp"
+                app:layout_constraintTop_toBottomOf="@+id/animal_price_view"
                 app:layout_constraintStart_toStartOf="parent"
                 />
+
             <TextView
                 android:id="@+id/sold_to"
                 android:text="@string/sold_to"
@@ -44,8 +80,20 @@
                 android:layout_margin="10dp"
                 android:textSize="24sp"
                 app:layout_constraintTop_toBottomOf="@+id/animal_price"
+                app:layout_constraintStart_toEndOf="@+id/sold_to_view"
+                app:layout_constraintEnd_toEndOf="parent"
+                />
+            <TextView
+                android:id="@+id/selling_date_view"
+                android:text="@string/selling_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:textSize="24sp"
+                app:layout_constraintTop_toBottomOf="@+id/sold_to_view"
                 app:layout_constraintStart_toStartOf="parent"
                 />
+
             <TextView
                 android:id="@+id/selling_date"
                 android:text="@string/selling_date"
@@ -53,8 +101,9 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
                 android:textSize="24sp"
+                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/sold_to"
-                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/selling_date_view"
                 />
         </androidx.constraintlayout.widget.ConstraintLayout>
 

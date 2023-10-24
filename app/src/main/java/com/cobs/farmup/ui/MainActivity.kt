@@ -5,19 +5,10 @@ import android.os.Bundle
 import androidx.navigation.NavController
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.AppBarConfiguration
-import androidx.navigation.ui.setupActionBarWithNavController
-import androidx.navigation.ui.setupWithNavController
-import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
 import com.cobs.farmup.R
-import com.cobs.farmup.data.retrofit.WorkerRetrofitInstance
 import com.cobs.farmup.databinding.ActivityMainBinding
-import com.cobs.farmup.ui.adapter.WorkerAdapter
 import com.google.android.material.bottomnavigation.BottomNavigationView
-import kotlinx.coroutines.CoroutineScope
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.launch
-import kotlinx.coroutines.withContext
+
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
@@ -30,9 +21,9 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        setSupportActionBar(findViewById(R.id.tool_bar))
+//        setSupportActionBar(findViewById(R.id.tool_bar))
 
-        bottomNavigationView = binding.bottomNavigationView
+//        bottomNavigationView = binding.bottomNavigationView
         val navHostFragment =
             supportFragmentManager.findFragmentById(R.id.fragmentContainerView) as NavHostFragment
         navController = navHostFragment.navController
@@ -41,12 +32,11 @@ class MainActivity : AppCompatActivity() {
                 R.id.id_home_fragment,
                 R.id.id_workers_fragment,
                 R.id.id_livestock_fragment,
-                R.id.id_sales_fragment,
-                R.id.id_settings_fragment
+                R.id.id_sales_fragment
             )
         )
-        setupActionBarWithNavController(navController, appBarConfiguration)
-        bottomNavigationView.setupWithNavController(navController)
+//        setupActionBarWithNavController(navController, appBarConfiguration)
+//        bottomNavigationView.setupWithNavController(navController)
 
     }
 

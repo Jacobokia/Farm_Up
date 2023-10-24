@@ -13,7 +13,7 @@
     <item android:title="Sales"
         android:id="@+id/id_sales_fragment"
         android:icon="@drawable/baseline_money_24"/>
-    <item android:title="Settings"
-        android:id="@+id/id_settings_fragment"
+    <item android:title="Purchases"
+        android:id="@+id/id_purchases_fragment"
         android:icon="@drawable/baseline_settings_24"/>
 </menu>

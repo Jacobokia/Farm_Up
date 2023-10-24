@@ -9,8 +9,11 @@ import retrofit2.create
 
 class WorkerRetrofitInstance{
 
+    companion object{
+        val baseUrl = "https://ivansfarm.000webhostapp.com/api/"
+    }
     fun createWorkerService(): WorkerService{
-        val retrofit = Retrofit.Builder().baseUrl("https://ivansfarm.000webhostapp.com/api/")
+        val retrofit = Retrofit.Builder().baseUrl(baseUrl)
             .client(clientOKHTTP())
             .addConverterFactory(GsonConverterFactory.create())
             .build()
@@ -25,4 +28,5 @@ class WorkerRetrofitInstance{
         interceptor.level = HttpLoggingInterceptor.Level.BODY
         return OkHttpClient.Builder().addInterceptor(interceptor).build()
     }
+
 }

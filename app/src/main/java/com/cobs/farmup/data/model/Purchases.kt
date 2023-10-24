@@ -1,5 +1,11 @@
 package com.cobs.farmup.data.model
 
+
+data class PurchasesResponse(
+    val errorCode:Int,
+    val message:String,
+    val response:List<Purchases>
+)
 data class Purchases(
     var id: String,
     var product: String,

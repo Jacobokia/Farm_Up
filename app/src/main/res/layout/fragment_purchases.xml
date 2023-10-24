@@ -5,27 +5,18 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/light_green"
-    tools:context=".ui.SalesFragment">
+    tools:context=".PurchasesFragment">
+
+    <!-- TODO: Update blank fragment layout -->
 
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/sales_recyclerview"
-        android:layout_width="match_parent"
+        android:id="@+id/purchases_recyclerView"
+        android:layout_width="0dp"
         android:layout_height="0dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:listitem="@layout/sales_layout" />
-
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/floatingActionButtonForSales"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="36dp"
-        android:layout_marginBottom="104dp"
-        android:clickable="true"
-        android:src="@drawable/baseline_money_24"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        tools:listitem="@layout/purchases_layout"/>
 </androidx.constraintlayout.widget.ConstraintLayout>

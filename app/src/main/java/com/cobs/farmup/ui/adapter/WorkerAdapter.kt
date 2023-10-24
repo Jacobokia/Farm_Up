@@ -13,7 +13,8 @@ class WorkerAdapter(val context: Context, val workers:List<Worker>):RecyclerView
 
     class WorkerViewHolder(view: View):RecyclerView.ViewHolder(view){
         val firstNameView = view.findViewById<TextView>(R.id.first_name)
-        val lastNameView = view.findViewById<TextView>(R.id.last_name)
+        val lastNameView = view.findViewById<TextView>(R.id.second_name)
+        val phoneView = view.findViewById<TextView>(R.id.worker_phone)
 
     }
 
@@ -29,5 +30,6 @@ class WorkerAdapter(val context: Context, val workers:List<Worker>):RecyclerView
     override fun onBindViewHolder(holder: WorkerViewHolder, position: Int) {
         holder.firstNameView.text =workers[position].f_name
         holder.lastNameView.text = workers[position].l_name
+        holder.phoneView.text = workers[position].phone
     }
 }

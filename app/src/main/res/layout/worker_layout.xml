@@ -1,43 +1,103 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    android:layout_margin="20dp"
+    android:background="@color/light_green"
+    style="@style/Widget.Material3.CardView.Elevated"
     xmlns:app="http://schemas.android.com/apk/res-auto">
-    <androidx.cardview.widget.CardView
+    
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:cardElevation="5dp"
-        app:cardCornerRadius="5dp"
-        android:layout_margin="10dp"
-        app:layout_editor_absoluteX="1dp">
-        <androidx.constraintlayout.widget.ConstraintLayout
+        android:orientation="vertical">
+        <ImageView
+            android:id="@+id/worker_image"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="194dp"
+            app:srcCompat="@drawable/farmer"
+            android:scaleType="centerCrop"
+            android:contentDescription="image of a farmer"
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:id="@+id/tag_number_view"
+                android:text="First Name:"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="40"
+                android:layout_margin="10dp"
+                android:textSize="20sp"
+                android:gravity="center_horizontal"
+                />
             <TextView
                 android:id="@+id/first_name"
-                android:text="@string/first_name"
-                android:layout_width="wrap_content"
+                android:text="First name"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:layout_weight="40"
                 android:layout_margin="10dp"
-                android:textSize="24sp"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
+                android:textSize="20sp"
+                android:gravity="center_horizontal"
                 />
 
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
             <TextView
-                android:id="@+id/last_name"
-                android:text="@string/last_name"
-                android:layout_width="wrap_content"
+                android:text="Last Name:"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:layout_weight="40"
                 android:layout_margin="10dp"
-                android:textSize="24sp"
-                app:layout_constraintTop_toBottomOf="@+id/first_name"
-                app:layout_constraintStart_toStartOf="parent"
+                android:textSize="20sp"
+                android:gravity="center_horizontal"
                 />
-        </androidx.constraintlayout.widget.ConstraintLayout>
+            <TextView
+                android:id="@+id/second_name"
+                android:text="Second name"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="40"
+                android:layout_margin="10dp"
+                android:textSize="20sp"
+                android:gravity="center_horizontal"
+                />
 
-    </androidx.cardview.widget.CardView>
+        </LinearLayout>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:text="Phone:"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="40"
+                android:layout_margin="10dp"
+                android:textSize="20sp"
+                android:gravity="center_horizontal"
+                />
+            <TextView
+                android:id="@+id/worker_phone"
+                android:text="First name"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="40"
+                android:layout_margin="10dp"
+                android:textSize="20sp"
+                android:gravity="center_horizontal"
+                />
+
+        </LinearLayout>
+    </LinearLayout>
+</com.google.android.material.card.MaterialCardView>
